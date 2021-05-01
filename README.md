@@ -1,5 +1,7 @@
 # teacher-lagbe
 
+## Demo https://rashedafridi.github.io/teachers
+
 ## Project setup
 ```
 npm install

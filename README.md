@@ -1,6 +1,6 @@
 # teacher-lagbe
 
-## Demo https://rashedafridi.github.io/teachers
+## Demo https://rashedafridi.github.io/Vue-Teacher-lagbe/
 
 ## Project setup
 ```

@@ -11,7 +11,7 @@ cd dist
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
-
+cp index.html 404.html
 git init
 git add -A
 git commit -m 'deploy-2'
@@ -20,6 +20,6 @@ git commit -m 'deploy-2'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:rashedafridi/Vue-Teacher-lagbe.git main:gh-pages
+git push -f git@github.com:rashedafridi/vue-teacher-lagbe.git main:gh-pages
 
 cd -

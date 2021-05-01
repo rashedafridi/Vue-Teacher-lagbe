@@ -8,6 +8,8 @@ import RequestsReceived from '../views/requests/RequestsReceived.vue';
 import NotFound from '../views/NotFound.vue';
 
 const router = createRouter({
+  
+
   history: createWebHistory(),
   routes: [
     { name: 'home', path: '/', redirect: '/teachers' },

@@ -35,12 +35,12 @@ export default {
         this.formIsValid = false;
         return;
       }
-      this.$store.dispatch('requests/contactCoach', {
+      this.$store.dispatch('requests/contactTeacher', {
         email: this.email,
         message: this.message,
-        coachId: this.$route.params.id
+        teacherId: this.$route.params.id
       });
-      this.$router.replace('/coaches');
+      this.$router.replace('/teachers');
 
     },
   },
@@ -77,7 +77,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: #3d008d;
+  border-color: #531e00;
   background-color: #faf6ff;
   outline: none;
 }

@@ -8,7 +8,9 @@
       <label for="message">Message</label>
       <textarea rows="5" id="message" v-model.trim="message"></textarea>
     </div>
-    <p class="errors" v-if="!formIsValid">Please enter a valid email and non-empty message.</p>
+    <p class="errors" v-if="!formIsValid">
+      Please enter a valid email and non-empty message.
+    </p>
     <div class="actions">
       <base-button>Send Message</base-button>
     </div>
@@ -19,8 +21,8 @@
 export default {
   data() {
     return {
-      email: '',
-      message: '',
+      email: "",
+      message: "",
       formIsValid: true,
     };
   },
@@ -28,20 +30,19 @@ export default {
     submitForm() {
       this.formIsValid = true;
       if (
-        this.email === '' ||
-        !this.email.includes('@') ||
-        this.message === ''
+        this.email === "" ||
+        !this.email.includes("@") ||
+        this.message === ""
       ) {
         this.formIsValid = false;
         return;
       }
-      this.$store.dispatch('requests/contactTeacher', {
+      this.$store.dispatch("requests/contactTeacher", {
         email: this.email,
         message: this.message,
-        teacherId: this.$route.params.id
+        teacherId: this.$route.params.id,
       });
-      this.$router.replace('/teachers');
-
+      this.$router.replace("/teachers");
     },
   },
 };

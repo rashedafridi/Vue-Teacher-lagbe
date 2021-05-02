@@ -86,9 +86,8 @@
     </div>
     <p v-if="!formIsValid">Please fix the above errors and submit again.</p>
     <div class="btn">
-      <base-button >Register</base-button>
+      <base-button>Register</base-button>
     </div>
-    
   </form>
 </template>
 
@@ -173,10 +172,9 @@ export default {
   margin: 0.5rem 0;
 }
 
-.btn{
- 
+.btn {
   display: flex;
- 
+
   justify-content: flex-end;
 }
 label {
@@ -203,7 +201,7 @@ input:focus,
 textarea:focus {
   background-color: #f0e6fd;
   outline: none;
-  border-color: #5a2c00 ;
+  border-color: #5a2c00;
 }
 
 input[type="checkbox"] {

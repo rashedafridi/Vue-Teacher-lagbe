@@ -1,20 +1,20 @@
 import { createStore } from "vuex";
 
-import teachersModule from './modules/teachers/index.js';
-import requestsModule from './modules/requests/index.js';
+import teachersModule from "./modules/teachers/index.js";
+import requestsModule from "./modules/requests/index.js";
 export default createStore({
-  modules:{
+  modules: {
     teachers: teachersModule,
-    requests: requestsModule
+    requests: requestsModule,
   },
   state() {
     return {
-      userId: 'c3'
+      userId: "c3",
     };
   },
   getters: {
     userId(state) {
       return state.userId;
-    }
-  }
+    },
+  },
 });

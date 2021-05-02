@@ -21,7 +21,6 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  
 }
 div {
   color: rgb(245, 185, 116);

@@ -1,6 +1,7 @@
 <template>
-  <div>page NOT Found</div>
+  <base-card>
+    <h2>Page not found</h2>
+    <div>404</div>
+  </base-card>
 </template>
-<style scoped>
-
-</style>
+<style scoped></style>

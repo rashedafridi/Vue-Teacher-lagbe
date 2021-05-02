@@ -71,7 +71,6 @@ header ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 li {

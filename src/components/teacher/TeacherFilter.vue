@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  emits: ['change-filter'],
+  emits: ["change-filter"],
   data() {
     return {
       filters: {
@@ -30,7 +30,7 @@ export default {
         chemistry: true,
         biology: true,
         physics: true,
-      }
+      },
     };
   },
   methods: {
@@ -39,13 +39,13 @@ export default {
       const isActive = event.target.checked;
       const updatedFilters = {
         ...this.filters,
-        [inputId]: isActive
+        [inputId]: isActive,
       };
       this.filters = updatedFilters;
-      this.$emit('change-filter', updatedFilters);
-    }
-  }
-}
+      this.$emit("change-filter", updatedFilters);
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -63,7 +63,7 @@ h2 {
 }
 
 .filter-option label {
-  margin-left: 0.25rem; 
+  margin-left: 0.25rem;
 }
 
 .filter-option.active label {

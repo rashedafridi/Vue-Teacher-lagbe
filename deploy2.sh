@@ -4,7 +4,7 @@
 set -e
 
 # build
-echo Building. this may take a minute...
+# echo Building. this may take a minute...
 npm run build
 
 # navigate into the build output directory
@@ -18,13 +18,13 @@ cp index.html 404.html
 
 # remove git and reinitialise
 rm -rf .git
-echo Deploying..
+# echo Deploying..
 git init
 git add -A
 git commit -m 'deploy-4'
 
 # deploy
 
-git push -f git@github.com:rashedafridi/Vue-Teacher-lagbe.git main:gh-pages
+git push -f git@github.com:rashedafridi/vue-teacher-lagbe.git main:gh-pages
 rm -rf dist
 cd -

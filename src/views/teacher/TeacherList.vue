@@ -6,13 +6,14 @@
   <section>
     <teacher-filter @change-filter="setFilters"></teacher-filter>
   </section>
-  <section>
+  <section> 
     <base-card>
       <div class="controls">
         <base-button mode="outline" @click="loadTeachers(true)"
           >Refresh</base-button
         >
-        <base-button v-if="!isteacher" link to="/register"
+        <base-button link to="/auth?redirect=register" v-if="!isLoggedIn">Login to Register as teacher</base-button>
+        <base-button v-if="isLoggedIn && !isteacher" link to="/register"
           >Register as a teacher</base-button
         >
       </div>
@@ -60,6 +61,9 @@ export default {
     };
   },
   computed: {
+        isLoggedIn() {
+      return this.$store.getters.isAuthenticated;
+    },
     isteacher() {
       return this.$store.getters["teachers/isteachers"];
     },
@@ -87,6 +91,9 @@ export default {
     hasTeacher() {
       return !this.isLoading && this.$store.getters["teachers/hasTeachers"];
     },
+  },
+  created() {
+    this.loadTeachers();
   },
   methods: {
     setFilters(updatedFilters) {

@@ -32,6 +32,8 @@ export default {
     context.commit("setTeacher", teachers);
     context.commit("setFetchTimestamp");
   },
+
+  
   async registerTeacher(context, data) {
     const userId = context.rootGetters.userId;
     const teacherData = {
@@ -41,8 +43,9 @@ export default {
       hourlyRate: data.rate,
       areas: data.areas,
     };
+    const token = context.rootGetters.token;
     const response = await fetch(
-      `https://teacher-algbe-default-rtdb.asia-southeast1.firebasedatabase.app/teacher/${userId}.json`,
+      `https://teacher-algbe-default-rtdb.asia-southeast1.firebasedatabase.app/teacher/${userId}.json?auth=`+token,
       {
         method: "PUT",
         body: JSON.stringify(teacherData),

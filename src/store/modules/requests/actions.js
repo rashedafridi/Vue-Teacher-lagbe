@@ -1,7 +1,7 @@
 export default {
   async contactTeacher(context, payload) {
     const newRequest = {
-      id: new Date().toISOString(),
+     
       teacherId: payload.teacherId,
       userEmail: payload.email,
       message: payload.message,
@@ -29,8 +29,9 @@ export default {
   },
   async fetchRequests(context) {
     const teacherId = context.rootGetters.userId;
+    const token = context.rootGetters.token;
     const response = await fetch(
-      `https://teacher-algbe-default-rtdb.asia-southeast1.firebasedatabase.app/requests/${teacherId}.json`
+      `https://teacher-algbe-default-rtdb.asia-southeast1.firebasedatabase.app/requests/${teacherId}.json?auth=` + token
     );
     const responseData = await response.json();
 
